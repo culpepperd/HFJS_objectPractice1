@@ -6,7 +6,27 @@ var taxi = {
 	color: "yellow",
 	passengers: 4,
 	convertible: false,
-	mileage: 281341
+	mileage: 281341,
+	started: false,
+
+	start: function () {
+		this.started = true;
+		console.log("You started the engine.");
+	},
+
+	stop: function () {
+		this.started = false;
+		console.log("You stopped the engine.");
+	},
+
+	drive: function () {
+		console.log("You're attempting to drive the " + this.make + " " + this.model + ".");
+		if (this.started) {
+			alert(this.make + " " + this.model + " goes zoom zoom!");
+		} else {
+			alert("You need to start the engine first.");
+        }
+    }
 };
 
 // cadillac object
@@ -52,6 +72,11 @@ function prequal(car) {
 	return true;
 }
 
+taxi.start();
+// taxi.stop();
+taxi.drive();
+
+/*
 var worthALook = prequal(chevy);
 
 if (worthALook) {
@@ -59,3 +84,4 @@ if (worthALook) {
 } else {
 	console.log("You should really pass on the " + chevy.make + " " + chevy.model + "...");
 }
+*/
