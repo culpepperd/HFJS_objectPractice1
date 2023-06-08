@@ -132,14 +132,9 @@ function prequal(car) {
 	return true;
 }
 
-taxi.drive();
-cadi.start();
-cadi.stop();
-fiat.start();
-fiat.drive();
-chevy.start();
-chevy.drive();
-chevy.stop();
+for (var prop in chevy) {
+	console.log(prop + ": " + chevy[prop]);
+}
 
 /*
 var worthALook = prequal(chevy);
