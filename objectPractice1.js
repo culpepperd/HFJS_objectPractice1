@@ -70,6 +70,7 @@ var fiat = {
 	convertible: false,
 	mileage: 88000,
 	started: false,
+	fuel: 0;
 
 	start: function () {
 		this.started = true;
@@ -88,7 +89,11 @@ var fiat = {
 		} else {
 			alert("You need to start the engine first.");
 		}
-	}
+	},
+
+	addFuel: function (amount) {
+		this.fuel = this.fuel + amount;
+    }
 };
 
 // chevy object
@@ -132,6 +137,7 @@ function prequal(car) {
 	return true;
 }
 
+// "for in" loop iterates through an object's properties
 for (var prop in chevy) {
 	console.log(prop + ": " + chevy[prop]);
 }
